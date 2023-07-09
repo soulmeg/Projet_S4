@@ -48,6 +48,17 @@
   </div>
   <script src="../../assets/js/jquery.min.js"></script>
   <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+     if (localStorage.getItem('nouvellePage')) {
+      var nouvellePage = localStorage.getItem('nouvellePage');
+
+      // Supprime l'URL stockée pour éviter qu'elle soit réutilisée
+      localStorage.removeItem('nouvellePage');
+
+      // Effectuez des actions spécifiques pour la deuxième page
+      // ...
+    }
+  </script>
 </body>
 
 </html>

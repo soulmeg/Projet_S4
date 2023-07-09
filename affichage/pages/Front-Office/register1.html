@@ -33,6 +33,14 @@
                     <label for="birthdateInput" class="form-label">Birth Date</label>
                     <input type="date" class="form-control" id="birthdateInput" aria-describedby="emailHelp">
                   </div>
+                  <div class="mb-3">
+                    <label for="poidsInput" class="form-label">Poids</label>
+                    <input type="number" class="form-control" id="poidsInput">
+                  </div>
+                  <div class="mb-3">
+                    <label for="tailleInput" class="form-label">Poids</label>
+                    <input type="number" class="form-control" id="tailleInput">
+                  </div>
                   <div class="mb-4">
                     <label class="form-label">Gender</label>
                     <div class="radio-container">
@@ -48,9 +56,17 @@
                   </div>
                   <a href="#" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" id="nextStepButton">Next Step</a>
                   <script>
-                    document.getElementById("nextStepButton").addEventListener("click", function(event) {
-                      event.preventDefault();
-                      window.location.href = "./register2.html";
+                   // Lorsqu'un lien est cliqué
+                      document.getElementById('nextStepButton').addEventListener('click', function(e) {
+                      e.preventDefault(); // Empêche le comportement par défaut du lien
+
+                      var nouvellePage = "./register2.html"; // L'URL de la deuxième page
+
+                      // Stocke l'URL de la deuxième page dans le localStorage
+                      localStorage.setItem('nouvellePage', nouvellePage);
+
+                      // Redirige vers la deuxième page
+                      window.location.href = nouvellePage;
                     });
                   </script>
                
