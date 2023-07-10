@@ -81,7 +81,6 @@
 			}
 		}
 
-		
 		public function logout(){
 			$this->load->library('session');
 			$this->session->unset_userdata('user');  
