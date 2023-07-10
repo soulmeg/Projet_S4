@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p><?php echo $profil->email ;?></p>
+    <p><?php echo $profil->Nom ;?></p>
+    <p><?php echo $profil->Prenom ;?></p>
+    <p><?php echo $profil->poids ;?></p>
+    <p><?php echo $profil->taille ;?></p>
+  
 </body>
 </html>
