@@ -24,7 +24,7 @@
                 <form action="<?php echo site_url("user/User/login_user"); ?>" method="POST" class="form">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" value="soary@gmail.com">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" value="ary@gmail.com">
                     </div>
                     <div class="mb-4">
                         <label for="exampleInputPassword1" class="form-label">Password</label>

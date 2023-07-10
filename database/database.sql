@@ -113,4 +113,8 @@ create table Paiement(
     foreign key(idUser) references users(idUser),
     foreign key(idRegime) references Regime(idRegime),
     foreign key(idPrix) references PrixRegime(id)
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> base_de_donnees
