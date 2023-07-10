@@ -8,14 +8,14 @@
 			$this->load->model('user/User_model', 'user');
 		}
 
-		public function login_admin(){
+		public function login(){
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 
 			try{
 				$user = $this->user->login_as_admin($username, $password);
 				$this->session->set_userdata('admin_session', true);
-				$this->session->set_userdata('admin_id', $user->idUser);
+				$this->session->set_userdata('admin', $user);
 				redirect("admin/admin/");
 			}catch(Exception $e){
 				echo $e->getMessage();

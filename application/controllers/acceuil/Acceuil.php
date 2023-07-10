@@ -4,8 +4,8 @@
 
 	class Acceuil extends CI_Controller{
 
-		public function admin_login(){
-			$this->load->view('test_admin');
+		public function admin(){
+			$this->load->view("admin/index");
 		}
 		public function user(){
 			$this->load->view('loginUser');
