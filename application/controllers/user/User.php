@@ -63,7 +63,7 @@
 		}
 
 
-		
+	
 		public function insertion_user(){
 			$nom = $this->input->post('nom');
 			$prenom = $this->input->post('prenom');
@@ -89,11 +89,13 @@
 		
 		public function getUserById($id){
 			$data['profil']=$this->user->user_by_id($id);
-			$this->load->view('profil',$data);
+			$data['contents'] = 'profil';
+			$this->load->view('user/body',$data);
 		}
 
-		public function getHeader(){
-			$this->load->view('LandingPage');
+		public function getLandingPage(){
+			$data['contents'] = 'LandingPage';
+			$this->load->view('user/body',$data);
 		}
 	}	
 

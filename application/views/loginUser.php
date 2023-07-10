@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>nano</title>
+  <title>Login User</title>
   <!-- <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" /> -->
   <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.min.css');?>" />
   <link rel="stylesheet" href="<?php echo base_url('assets/css/login.css');?>"/>
@@ -53,7 +53,7 @@
     </div>
   </div>
   <script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
-  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js');?>"></script>
   <script>
   // Récupérer les éléments du DOM
 const showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
