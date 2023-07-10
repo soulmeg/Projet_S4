@@ -8,8 +8,7 @@
 			$this->load->model('user/User_model', 'user');
 		}
 
-		public function login_admin(){
-
+		public function login(){
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 
