@@ -9,5 +9,9 @@ create table users(
     sexe varchar(1),
     email varchar(50),
     password varchar(100),
-    estAdmin boolean
+    estAdmin boolean,
+    poids double precision,
+    taille double precision
 );
+drop table users;
+

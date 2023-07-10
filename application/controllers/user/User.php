@@ -8,10 +8,6 @@
 			$this->load->model('user/User_model', 'user');
 		}
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 		public function login_admin(){
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
@@ -38,20 +34,31 @@
 				echo $e->getMessage();
 			}
 		}
-		public function login_user(){
-			$username = $this->input->post('username');
+
+
+		public function insertion_user(){
+			$nom = $this->input->post('nom');
+			$prenom = $this->input->post('prenom');
+			$dateNaissance = $this->input->post('dateNaissance');
+			$sexe = $this->input->post('sexe');
+			$email = $this->input->post('email');
 			$password = $this->input->post('password');
-			try{
-				$user = $this->user->login_as_admin($username, $password);
-				$this->session->set_userdata('admin_session', true);
-				$this->session->set_userdata('admin_id', $user->idUser);
-				redirect("admin/admin/");
-			}catch(Exception $e){
+			$poids = $this->input->post('poids');
+			$taille = $this->input->post('taille');
+			try {
+				$this->user->insert_user($nom,$prenom,$dateNaissance,$sexe,$email,$password,$poids,$taille);
+				redirect('acceuil/Acceuil/user');
+			} catch (Exception $e) {
 				echo $e->getMessage();
 			}
-
 		}
 
+		public function logout(){
+			$this->load->library('session');
+			$this->session->unset_userdata('user');  
+			redirect("Acceuil"); 
+		}
+	
 	}
 
 ?>

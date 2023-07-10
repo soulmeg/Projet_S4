@@ -39,7 +39,7 @@
                         </div>
                         <div class="new_account">
                             <p>New account?</p>
-                            <a class="text-primary fw-bold" href="./index.html">Sign Up</a>
+                            <a class="text-primary fw-bold" href="<?php echo site_url('acceuil/Acceuil/inscription');?>">Sign Up</a>
                         </div>
                     </div>
                     <input type="submit" value="LOG IN"class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">
