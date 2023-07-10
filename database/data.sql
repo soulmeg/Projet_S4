@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-insert into users values(default,'Rabe','Koto','2002-02-02','f','rabe@gmail.com','rb1','0','50','14.5');
-insert into users values(default,'Rasoa','Mirana','1999-10-15','f','rasoa@gmail.com','rs1','0','50','14.5');
-insert into users values(default,'Randria','soary','1985-06-14','g','soary@gmail.com','soary1','1','50','14.5');
-insert into users values(default,'Randria','Sirra','2000-06-14','g','soary@gmail.com','sira','0','50','14.5');
-=======
->>>>>>> base_de_donnees
 insert into users values(default,'Rabe','Koto','2002-02-02','f','rabe@gmail.com','rb1','0','60','1.60');
 insert into users values(default,'Rasoa','Mirana','1999-10-15','f','rasoa@gmail.com','rs1','0','78','1.70');
 insert into users values(default,'Randria','soary','1985-06-14','g','soary@gmail.com','soary1','1','65','1.50');

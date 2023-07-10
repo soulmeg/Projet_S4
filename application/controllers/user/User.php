@@ -2,7 +2,6 @@
 	defined('BASEPATH') or exit('Direct access not allowed');
 
 	class User extends CI_Controller{
-
 		public function __construct(){
 			parent::__construct();
 			$this->load->model('user/User_model', 'user');
@@ -31,7 +30,8 @@
 				$this->session->set_userdata('user_id', $user->idUser);
 				// redirect("acceuil/Acceuil/bienvenue");
 				$data['user_session'] = $this->session->userdata('user_session');
-				$this->load->view('acceuil', $data);
+				$data['contents'] = 'acceuil';
+				$this->load->view('user/body', $data);
 			}catch(Exception $e){
 				echo $e->getMessage();
 			}
@@ -91,7 +91,10 @@
 			$data['profil']=$this->user->user_by_id($id);
 			$this->load->view('profil',$data);
 		}
-		
-	}
+
+		public function getHeader(){
+			$this->load->view('LandingPage');
+		}
+	}	
 
 ?>
