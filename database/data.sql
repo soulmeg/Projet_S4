@@ -74,11 +74,11 @@ VALUES
 
 
 -- REGIME----------------------------------------------
-insert into regime values(default,'maigrissant_1',-1000);
-insert into regime values(default,'maigrissant_1',-1200);
-insert into regime values(default,'maigrissant_1',-1600);
-insert into regime values(default,'grossissant_1',1200);
-insert into regime values(default,'grossissant_2',2200);
+insert into Regime values(default,'maigrissant_1',-1000);
+insert into Regime values(default,'maigrissant_1',-1200);
+insert into Regime values(default,'maigrissant_1',-1600);
+insert into Regime values(default,'grossissant_1',1200);
+insert into Regime values(default,'grossissant_2',2200);
 
 
 -- DETAILSREGIME---------------------------------------
@@ -124,6 +124,7 @@ insert into DetailsRegimeSport values(default,2,2);
 insert into DetailsRegimeSport values(default,3,3);
 insert into DetailsRegimeSport values(default,4,4);
 insert into DetailsRegimeSport values(default,5,5);
+
 
 -- PRIX REGIME 
 insert into PrixRegime values(default,7,1,10000);
