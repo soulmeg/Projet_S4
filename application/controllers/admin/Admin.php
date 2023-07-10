@@ -9,12 +9,12 @@
 			if( !isset($_SESSION['admin_session']) ){
 				redirect(base_url());
 			}
+			$this->load->model("user/User_model", 'user');
 		}
 
 		public function index(){
-			echo "HELLO LC EH";
+			
 		}
-
 
 	}
 
