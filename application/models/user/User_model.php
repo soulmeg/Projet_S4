@@ -26,7 +26,14 @@
 			}
 		}
 
-
+		public function get_users(){
+			$sql = $this->db->get("user");
+			$results = array();
+			foreach ($sql->result_array() as $result) {
+				$results[] = $result;
+			}
+			return $results;
+		}
 
 	}
 
