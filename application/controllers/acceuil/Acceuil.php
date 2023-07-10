@@ -15,7 +15,7 @@
 			echo "tongasoa";
 		}
 		public function inscription(){
-			$this->load->view('test_inscription');
+			$this->load->view('register1');
 		}
 
 	
