@@ -33,6 +33,14 @@
 			return $objets;
 		}
 
+		public function getAllPlats($id){
+			$sql = "select * from Plat where idPlat = %s";
+			$sql = sprintf($sql, $this->db->escape($id));
+			$query = $this->db->query($sql);
+			$objets = $query->result_array();
+			return $objets;
+		}
+
 		public function login_as_user($email, $password ){
 			$sql = "select * from users where email = %s and password = %s and estAdmin ='0'";
 			$sql = sprintf( $sql, $this->db->escape($email), $this->db->escape($password));
@@ -52,7 +60,7 @@
 			$this->db->query($sql);
 		}
 
-		
+
 
 		public function get_users(){
 			$sql = $this->db->get("user");

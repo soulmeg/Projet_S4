@@ -93,8 +93,24 @@
 			$this->load->view('user/body',$data);
 		}
 
+		public function getPlats($id){
+			$data['profil']=$this->user->getAllPlats($id);
+			$data['contents'] = 'ingredientsPlat';
+			$this->load->view('user/body',$data);
+		}
+
 		public function getLandingPage(){
 			$data['contents'] = 'LandingPage';
+			$this->load->view('user/body',$data);
+		}
+
+		public function addWallet(){
+			$data['contents'] = 'AddMonnaie';
+			$this->load->view('user/body',$data);
+		}
+
+		public function detailRegime($id){
+			$data['contents'] = 'detailsRegime';
 			$this->load->view('user/body',$data);
 		}
 	}	

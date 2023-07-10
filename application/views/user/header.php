@@ -55,11 +55,11 @@
                 </a>
               </li>
               <li class="sidebar-item">
-                <a class="sidebar-link" href="<?php echo base_url('user/User/getLandingPage');?>" aria-expanded="false">
+                <a class="sidebar-link" href="<?php echo base_url('user/User/addWallet');?>" aria-expanded="false">
                   <span>
                     <i class="ti ti-layout-dashboard"></i>
                   </span>
-                  <span class="hide-menu">Ajout porte feuille</span>
+                  <span class="hide-menu">Ajout porte monnaie </span>
                 </a>
               </li>
               <li class="nav-small-cap">
