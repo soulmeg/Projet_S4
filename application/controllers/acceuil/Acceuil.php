@@ -7,7 +7,15 @@
 		public function admin_login(){
 			$this->load->view('test_admin');
 		}
+		public function user(){
+			$this->load->view('loginUser');
+		}
+		public function bienvenue(){
+			// $this->load->view('acceuil');
+			echo "tongasoa";
+		}
 
+	
 	}
 
 ?>

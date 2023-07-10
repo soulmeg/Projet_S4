@@ -15,7 +15,19 @@
 		// Afaka factorena ito zavatra ito
 
 		public function login_as_admin( $email, $password ){
-			$sql = "select * from user where email = %s and password = %s and estAdmin = 1";
+			$sql = "select * from users where email = %s and password = %s and estAdmin ='t'";
+			$sql = sprintf( $sql, $this->db->escape($email), $this->db->escape($password));
+			$sql = $this->db->query($sql);
+			$result = $sql->row();
+			if( isset($result) ){
+				return $result;
+			}else{
+				throw new Exception( "Désolé veuillez verifier vos identifiants" );
+			}
+		}
+		
+		public function login_as_user($email, $password ){
+			$sql = "select * from users where email = %s and password = %s and estAdmin ='f'";
 			$sql = sprintf( $sql, $this->db->escape($email), $this->db->escape($password));
 			$sql = $this->db->query($sql);
 			$result = $sql->row();

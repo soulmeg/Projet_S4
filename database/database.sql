@@ -1,8 +1,8 @@
 create database projet_S4;
 \c projet_S4 postgres
 
-create table user(
-    idUser int  primary key auto_increment,
+create table users(
+    idUser serial primary key ,
     Nom varchar(150),
     Prenom varchar(150),
     DateNaissance date,

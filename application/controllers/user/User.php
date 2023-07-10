@@ -9,7 +9,6 @@
 		}
 
 		public function login_admin(){
-
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 
@@ -21,7 +20,19 @@
 			}catch(Exception $e){
 				echo $e->getMessage();
 			}
+		}
 
+		public function login_user(){
+			$username = $this->input->post('username');
+			$password = $this->input->post('password');
+			try{
+				$user = $this->user->login_as_user($username, $password);
+				$this->session->set_userdata('user_session', true);
+				$this->session->set_userdata('user_id', $user->idUser);
+				redirect("acceuil/Acceuil/bienvenue");
+			}catch(Exception $e){
+				echo $e->getMessage();
+			}
 		}
 
 	}
