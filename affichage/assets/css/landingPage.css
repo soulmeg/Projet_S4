@@ -1,0 +1,19 @@
+.content {
+  height: 800px;
+}
+
+.presentation-card {
+  height: 93% !important;
+}
+.presentation-card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.price {
+  margin-left: 20px;
+  color: black;
+  padding-top: 3%;
+}/*# sourceMappingURL=landingPage.css.map */
