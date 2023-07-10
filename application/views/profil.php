@@ -7,9 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>TONGASOA</h2>
-    <div>
-
-    </div>
+    
 </body>
 </html>

@@ -3,6 +3,7 @@
 
 	class Regimes extends CI_Model{
 		
+		// public function 
 	}
 
 ?>

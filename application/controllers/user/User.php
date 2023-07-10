@@ -39,7 +39,6 @@
 		// Dans votre contrôleur pour le formulaire de register1.php
 		public function process_register1()
 		{
-			// Valider les données du formulaire de register1.php
 
 			// Récupérer les données du formulaire
 			$nom = $this->input->post('nom');
@@ -63,6 +62,7 @@
 		}
 
 
+		
 		public function insertion_user(){
 			$nom = $this->input->post('nom');
 			$prenom = $this->input->post('prenom');
