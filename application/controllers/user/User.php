@@ -36,6 +36,33 @@
 		}
 
 
+		// Dans votre contrôleur pour le formulaire de register1.php
+		public function process_register1()
+		{
+			// Valider les données du formulaire de register1.php
+
+			// Récupérer les données du formulaire
+			$nom = $this->input->post('nom');
+			$prenom = $this->input->post('prenom');
+			$dateNaissance = $this->input->post('dateNaissance');
+			$poids = $this->input->post('poids');
+			$taille = $this->input->post('taille');
+			$sexe = $this->input->post('sexe');
+
+			// Stocker les données dans une variable de session
+			$this->session->set_userdata('register1_data', [
+				'nom' => $nom,
+				'prenom' => $prenom,
+				'dateNaissance' => $dateNaissance,
+				'poids' => $poids,
+				'taille' => $taille,
+				'sexe' => $sexe
+			]);
+			// redirect('register2');
+			$this->load->view('register2');
+		}
+
+
 		public function insertion_user(){
 			$nom = $this->input->post('nom');
 			$prenom = $this->input->post('prenom');
@@ -53,10 +80,11 @@
 			}
 		}
 
+		
 		public function logout(){
 			$this->load->library('session');
 			$this->session->unset_userdata('user');  
-			redirect("Acceuil"); 
+			redirect("acceuil/Acceuil/loginUser"); 
 		}
 	
 	}
