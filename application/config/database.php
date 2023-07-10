@@ -76,10 +76,10 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'sarobidy',
-	'password' => 'manoary',
+	'username' => 'postgres',
+	'password' => 'megane',
 	'database' => 'projet_s4',
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

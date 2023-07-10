@@ -1,5 +1,5 @@
 create database projet_S4;
-use projet_S4
+\c projet_S4 postgres
 
 create table user(
     idUser int  primary key auto_increment,
