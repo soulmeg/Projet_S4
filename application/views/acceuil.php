@@ -8,6 +8,6 @@
 </head>
 <body>
     <h2>TONGASOA</h2>
-    <a href="<?php echo base_url('user/User/getUserById/1');?>">user></a>
+    <a href="<?php echo base_url('user/User/getUserById/1');?>">user</a>
 </body>
 </html>
