@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>TONGASOA</h2>
+    <h2> <?php echo $user_session; ?> </h2>
     <a href="#" action="<?php echo site_url("user/User/login_user"); ?>">Achat Code</a>
 </body>
 </html>

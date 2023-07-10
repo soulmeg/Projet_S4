@@ -29,7 +29,8 @@
 				$user = $this->user->login_as_user($username, $password);
 				$this->session->set_userdata('user_session', true);
 				$this->session->set_userdata('user_id', $user->idUser);
-				redirect("acceuil/Acceuil/bienvenue");
+				$data['user_session']= $this->session->userdata('user_session');
+				$this->load->view('acceuil',$data);
 			}catch(Exception $e){
 				echo $e->getMessage();
 			}
