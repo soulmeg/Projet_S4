@@ -1,0 +1,18 @@
+.content{
+    height: 800px;
+}
+
+.presentation-card{
+    height: 93% !important;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.price{
+    margin-left: 20px ;
+    color: black;
+    padding-top: 3%;
+}

@@ -1,0 +1,13 @@
+.content {
+  height: 800px;
+}
+
+.presentation-card {
+  height: 93% !important;
+}
+.presentation-card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=landingPage.css.map */
