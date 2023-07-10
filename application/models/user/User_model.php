@@ -35,6 +35,12 @@
 			return $results;
 		}
 
+		public function remove_user( $id ){
+			$sql = "delete from users where idUser = %s";
+			$sql = sprintf($sql, $this->db->escape($id));
+			$this->db->query($sql);
+		}
+
 	}
 
 ?>

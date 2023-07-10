@@ -67,6 +67,19 @@
 			redirect(base_url());
 		}
 
+		public function list_user(){
+			$users = $this->user->get_users();
+			$data['users'] = $users;
+			$data['body'] = 'admin/user/list_user';
+
+			$this->load->view('admin/template/index' , $data);
+		}
+
+		public function remove_user( $idUser ){
+			$this->user->remove_user($idUser);
+			redirect('admin/admin/list_user');
+		}
+
 		public function remove_code( $code ){
 			$this->code->remove_code($code);
 			redirect('admin/admin/list_code');
