@@ -15,7 +15,7 @@
 		// Afaka factorena ito zavatra ito
 
 		public function login_as_admin( $email, $password ){
-			$sql = "select * from user where email = %s and password = %s and estAdmin = 1";
+			$sql = "select * from users where email = %s and password = %s and estAdmin = 1";
 			$sql = sprintf( $sql, $this->db->escape($email), $this->db->escape($password));
 			$sql = $this->db->query($sql);
 			$result = $sql->row();
@@ -27,7 +27,7 @@
 		}
 
 		public function get_users(){
-			$sql = $this->db->get("user");
+			$sql = $this->db->get("users");
 			$results = array();
 			foreach ($sql->result_array() as $result) {
 				$results[] = $result;

@@ -26,7 +26,7 @@
 		<?php $this->load->view("admin/template/header"); ?>
 		<div class="container-fluid page-body-wrapper">
 			<?php $this->load->view('admin/template/navbar'); ?>
-			<?php $this->load->view('admin/acceuil'); ?>
+			<?php $this->load->view( $body ); ?>
 			<?php $this->load->view('admin/template/footer'); ?>
 		</div>
 

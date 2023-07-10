@@ -14,9 +14,8 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Ajouter Codes</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Modifier Codes</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Listes des Codes</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/add_code'); ?>">Ajouter Codes</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/list_code'); ?>">Listes des Codes</a></li>
               </ul>
             </div>
           </li>
