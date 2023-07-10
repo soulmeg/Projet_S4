@@ -2,7 +2,7 @@ create database projet_S4;
 use projet_S4
 
 create table user(
-    idUser int primary key,
+    idUser int  primary key auto_increment,
     Nom varchar(150),
     Prenom varchar(150),
     DateNaissance date,
