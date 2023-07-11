@@ -110,11 +110,11 @@ insert into code values(default,'AR0001000_1','1000',0);
 
 
 -- ACTIVITE
-insert into activite values(default,'Natation',1000);
-insert into activite values(default,'Musculation',1500);
-insert into activite values(default,'Footing',700);
-insert into activite values(default,'Vitesse',800);
-insert into activite values(default,'Endurance',1300);
+insert into activite values(default,'Natation');
+insert into activite values(default,'Musculation');
+insert into activite values(default,'Footing');
+insert into activite values(default,'Vitesse');
+insert into activite values(default,'Endurance');
 
 
 
@@ -132,4 +132,8 @@ insert into PrixRegime values(default,2,4,500,10000);
 insert into PrixRegime values(default,7,4,1200,15000);
 insert into PrixRegime values(default,14,4,2560,25000);
 
-
+-- 
+insert into detailActivite values(default,2,1,200);
+insert into detailActivite values(default,7,1,700);
+insert into detailActivite values(default,2,2,400);
+insert into detailActivite values(default,7,2,700);

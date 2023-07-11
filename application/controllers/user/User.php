@@ -30,7 +30,7 @@
 				$this->session->set_userdata('user_id', $user->idUser);
 				// redirect("acceuil/Acceuil/bienvenue");
 				$data['user_session'] = $this->session->userdata('user_session');
-				$data['contents'] = 'LandingPage';
+				$data['contents'] = 'acceuil';
 				$this->load->view('user/body', $data);
 			}catch(Exception $e){
 				echo $e->getMessage();
@@ -50,15 +50,15 @@
 			$sexe = $this->input->post('sexe');
 
 			// Stocker les données dans une variable de session
-			// $this->session->set_userdata('register1_data',[
-			// 	'nom' => $nom,
-			// 	'prenom' => $prenom,
-			// 	'dateNaissance' => $dateNaissance,
-			// 	'poids' => $poids,
-			// 	'taille' => $taille,
-			// 	'sexe' => $sexe
-			// ]);
-			// redirect('register2');
+			$this->session->set_userdata('register1_data',[
+				'nom' => $nom,
+				'prenom' => $prenom,
+				'dateNaissance' => $dateNaissance,
+				'poids' => $poids,
+				'taille' => $taille,
+				'sexe' => $sexe
+			]);
+			redirect('register2');
 			$this->load->view('register2');
 		}
 

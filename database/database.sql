@@ -84,14 +84,21 @@ create table porteMonnaie(
 
 create table activite(
     idActivite int primary key auto_increment,
-    nom varchar(150),
-    perte double precision
+    nom varchar(150)
+);
+create table detailActivite(
+    id int primary key auto_increment,
+    duree int,
+    idActivite int,
+    perte double precision,
+    foreign key(idActivite) references activite(idActivite) 
 );
 
 create table DetailsRegimeSport(
     idRegimeSport int primary key auto_increment,
     idRegime int,
     idActivite int,
+    apport
     foreign key(idRegime) references Regime(idRegime),
     foreign key(idActivite) references activite(idActivite)
 );

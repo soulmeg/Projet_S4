@@ -16,32 +16,34 @@
      
         <div class="container-fluid">
             <div class="container-fluid">
-            <?php echo $user_session;?>
+            <!-- <?php echo $user_session;?> -->
               <div class="card">
                 <div class="card-body">
                     <h2 class="card-title fw-semibold mb-4">Nos regimes</h2>
+
+                    <?php if(count($regimes) !=0 ){?>
+                    <?php for ($i=0; $i < count($regimes); $i++) {  ?>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card presentation-card">
                                 <img src="../../assets/images/fitness.jpg" class="card-img-top presentation-card" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Gagner du poids</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                        the
-                                        card's content.</p>
+                                    <h5 class="card-title"><?php echo $regimes[$i]['nom']; ?></h5>
+                                    <h5 class="card-title"><?php echo $poids_session;?></h5>
+                                    <p class="card-text">
+                                        Prix unitaire pour <?php echo $regimes[$i]['duree']; ?>jours  : <?php echo $regimes[$i]['PrixRegime']; ?> Ar
+                                    </p>
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <a href="<?php echo base_url('user/User/detailRegime/1');?>" class="btn btn-primary">Details</a>
-                                        </div>
-                                        <div class="col-md-5 price"> 
-                                                 Ar 70.000
+                                            <a href="<?php echo base_url('user/Regime/getRegimes/'.$regimes[$i]['idRegime'].'/1000');?>" class="btn btn-primary">Details</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                       
                     </div>
+                    <?php } ?>
+                    <?php }?>
                 </div>
             </div>
         </div>            
