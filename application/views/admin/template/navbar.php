@@ -64,7 +64,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" href="<?php echo site_url('admin/admin/list_validation'); ?>" >
               <i class="icon-contract menu-icon"></i>
               <span class="menu-title">
                   Validation des codes

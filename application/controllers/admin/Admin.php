@@ -10,6 +10,7 @@
 			}
 			$this->load->model("user/User_model", 'user');
 			$this->load->model("code/Code_model", 'code');
+			$this->load->model("code/Validation_model", 'validation');
 			$this->load->model("activities/Sport_model", 'sport');
 			$this->load->model("ingredients/Ingredient_model", 'ingredient');
 			$this->load->model("plat/Plat_model", 'plat');
@@ -221,6 +222,24 @@
 
 			$this->plat->modify_plate( $id_plate, $nom, $apport, $ingredients, $idDetails );
 			redirect('admin/admin/list_plate');
+		}
+
+		public function list_validation(){
+			$validations = $this->validation->get_all();
+			$data['validations'] = $validations;
+			$data['body'] = "admin/validation/list_validation";
+
+			$this->load->view('admin/template/index', $data);
+		}
+
+		public function reject_validation($idcode){
+			$this->validation->reject($idcode);
+			redirect('admin/admin/list_validation');
+		}
+
+		public function accept_validation($idvalidation, $idcode, $montant, $iduser){
+			$this->validation->validate($idvalidation, $idcode, $montant, $iduser);
+			redirect('admin/admin/list_validation');
 		}
 
 	}

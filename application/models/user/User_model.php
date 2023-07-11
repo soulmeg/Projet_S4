@@ -41,6 +41,13 @@
 			$this->db->query($sql);
 		}
 
+		public function get_money( $id ){
+			$sql = "select * from porteMonnaie where idUser = %s";
+			$sql = sprintf( $sql, $this->db->escape($sql) );
+			$sql = $this->db->query($sql);
+			return $sql->row_array();
+		}
+
 	}
 
 ?>
