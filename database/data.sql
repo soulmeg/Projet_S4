@@ -54,7 +54,7 @@ VALUES
 
 
 -- DETAILSPLAT------------------------------------------
-INSERT INTO detailsPlat (idPlat, idIngredient)
+INSERT INTO detailsPlat (dPlat, idIngredient)
 VALUES
     (1,13),
     (1, 10),
@@ -74,11 +74,11 @@ VALUES
 
 
 -- REGIME----------------------------------------------
-insert into Regime values(default,'maigrissant_1',-1000);
-insert into Regime values(default,'maigrissant_1',-1200);
-insert into Regime values(default,'maigrissant_1',-1600);
-insert into Regime values(default,'grossissant_1',1200);
-insert into Regime values(default,'grossissant_2',2200);
+insert into Regime values(default,'maigrissant_1');
+insert into Regime values(default,'maigrissant_2');
+insert into Regime values(default,'maigrissant_3');
+insert into Regime values(default,'grossissant_1');
+insert into Regime values(default,'grossissant_2');
 
 
 -- DETAILSREGIME---------------------------------------
@@ -110,11 +110,11 @@ insert into code values(default,'AR0001000_1','1000',0);
 
 
 -- ACTIVITE
-insert into activite values(default,'Natation',-1000);
-insert into activite values(default,'Musculation',1500);
-insert into activite values(default,'Footing',700);
-insert into activite values(default,'Vitesse',800);
-insert into activite values(default,'Endurance',1300);
+insert into activite values(default,'Natation');
+insert into activite values(default,'Musculation');
+insert into activite values(default,'Footing');
+insert into activite values(default,'Vitesse');
+insert into activite values(default,'Endurance');
 
 
 
@@ -127,6 +127,13 @@ insert into DetailsRegimeSport values(default,5,5);
 
 
 -- PRIX REGIME 
-insert into PrixRegime values(default,7,1,10000);
+insert into PrixRegime values(default,7,1,1000,10000);
+insert into PrixRegime values(default,2,4,500,10000);
+insert into PrixRegime values(default,7,4,1200,15000);
+insert into PrixRegime values(default,14,4,2560,25000);
 
-
+-- 
+insert into detailActivite values(default,2,1,200);
+insert into detailActivite values(default,7,1,700);
+insert into detailActivite values(default,2,2,400);
+insert into detailActivite values(default,7,2,700);

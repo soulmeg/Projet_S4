@@ -30,7 +30,7 @@
 				$this->session->set_userdata('user_id', $user->idUser);
 				// redirect("acceuil/Acceuil/bienvenue");
 				$data['user_session'] = $this->session->userdata('user_session');
-				$data['contents'] = 'LandingPage';
+				$data['contents'] = 'acceuil';
 				$this->load->view('user/body', $data);
 			}catch(Exception $e){
 				echo $e->getMessage();
@@ -58,8 +58,10 @@
 				'taille' => $taille,
 				'sexe' => $sexe
 			]);
-			// redirect('register2');
-			$this->load->view('register2');
+
+
+			redirect('register2');
+			// $this->load->view('register2');
 		}
 
 		//redirect to view AchatCode
@@ -168,7 +170,7 @@
 			$result = $this->db->query($request);
 			$response = array(); // Tableau pour stocker les résultats
 
-			if ($result->num_rows() > 0) {
+			if ( $result->num_rows() > 0 ) {
 				$row = $result->row();
 				$response['idValidation'] = $row->idValidation;
 				$response['idCode'] = $row->idCode;

@@ -37,6 +37,8 @@
                   <span class="hide-menu">Acceuil</span>
                 </a>
               </li>
+
+              </li>
               <li class="sidebar-item">
                 <a class="sidebar-link" href="<?php echo base_url('user/User/choixRegime');?>" aria-expanded="false">
                   <span>

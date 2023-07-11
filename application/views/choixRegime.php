@@ -36,8 +36,12 @@
                                 Cela peut être réalisé en adoptant un régime alimentaire équilibré,
                                  en pratiquant régulièrement une activité physique et en adoptant de saines habitudes de vie.</p>
                             <div class="price">
-                            </div><button class="btn btn-outline-primary btn-block" type="button">CHOISIR</button>
-                        </div>
+                            <form action="<?php echo base_url('user/User/login_user'); ?>" method="POST">
+                                <div class="form-group">
+                                <input type="text" class="form-control" id="code-input" placeholder="Poids" namespace name="poids">
+                                </div>                           
+                                </div><button class="btn btn-outline-primary btn-block" type="button">CHOISIR</button>
+                        </form>                        </div>
                     </div>
                     <div class="col-md-5 col-lg-4"><div class="clean-pricing-item">
 
@@ -48,8 +52,11 @@
                             pour atteindre un poids souhaité. Cela peut être réalisé en augmentant l'apport calorique quotidien,
                              en favorisant les aliments riches en nutriments et en pratiquant une activité physique appropriée. 
                         <div class="price">
-                        <form action="<?php echo base_url('regimes/Regimes'); ?>" method="POST">
-                            </div><button class="btn btn-outline-primary btn-block" type="button">CHOISIR</button>
+                        <form action="<?php echo base_url('user/Regime/check_regime'); ?>" method="POST">
+                                <div class="form-group">
+                                <input type="text" class="form-control" id="code-input" placeholder="Poids " namespace name="poids">
+                                </div>                           
+                                <button class="btn btn-outline-primary btn-block" type="submit">CHOISIR</button>
                         </form>
                     </div></div>
                 </div>

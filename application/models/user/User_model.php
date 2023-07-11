@@ -24,7 +24,7 @@
 				throw new Exception( "Désolé veuillez verifier vos identifiants" );
 			}
 		}
-
+		
 		public function user_by_id($idUser){
 			$sql = "select * from users where idUser = %s";
 			$sql = sprintf($sql, $this->db->escape($idUser));

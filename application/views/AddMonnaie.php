@@ -26,6 +26,7 @@
 </head>
 <body>
 
+
     <div class="container">
         <div class="row">
             <div class="row content">
@@ -52,6 +53,7 @@
                          <?php } ?>
                         <button type="submit" class="btn btn-primary">Valider</button>
                     </form>
+
                 </div>
             </div>
             
