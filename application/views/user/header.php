@@ -55,7 +55,7 @@
                 </a>
               </li>
               <li class="sidebar-item">
-                <a class="sidebar-link" href="<?php echo base_url('user/User/addWallet');?>" aria-expanded="false">
+                <a class="sidebar-link" href="<?php echo base_url('user/User/addWallet/'.$user_session);?>" aria-expanded="false">
                   <span>
                     <i class="ti ti-layout-dashboard"></i>
                   </span>

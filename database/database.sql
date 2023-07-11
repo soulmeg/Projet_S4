@@ -115,3 +115,5 @@ create table Paiement(
     foreign key(idPrix) references PrixRegime(id)
 );
 
+alter table code modify column nom varchar(150) unique;
+

@@ -8,6 +8,7 @@
 </head>
 <body>
     <h2> <?php echo $user_session; ?> </h2>
+    hahsfddashdfasjfdh
     <a href="<?php echo site_url("user/User/redirectAchatCode/".$user_session); ?>">Achat Code</a>
 </body>
 </html>
