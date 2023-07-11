@@ -35,7 +35,7 @@
                               </td>
 
                               <td> 
-                                <a href="<?php echo site_url('admin/admin/accept_validation/'.$validation['idValidation']).'/'.$validation['code'].'/'.$validation['montant'].'/'.$validation['idUser']; ?>" class="btn btn-success "> Accepter </a>
+                                <a href="<?php echo site_url('admin/admin/accept_validation/'.$validation['idValidation']).'/'.$validation['idCode'].'/'.$validation['montant'].'/'.$validation['idUser']; ?>" class="btn btn-success "> Accepter </a>
                               </td>
                             <?php }
                               else if($validation['etat'] == 1){ ?>

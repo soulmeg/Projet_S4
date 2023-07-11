@@ -60,6 +60,13 @@
 			$this->db->query($sql);
 		}
 
+		public function getLastInsered(){
+			$users = $this->db->get('users');
+			$results = $users->result_array();
+			$last = $results[count($results) - 1];
+			return $last;
+		}
+
 
 
 		public function get_users(){
@@ -82,6 +89,16 @@
 			$sql = sprintf( $sql, $this->db->escape($sql) );
 			$sql = $this->db->query($sql);
 			return $sql->row_array();
+		}
+
+		public function create_wallet($idUser){
+			var_dump($idUser);
+			$data = array(
+				'idUser' => $idUser,
+				"argent" => 0
+			);
+			$this->db->insert( 'porteMonnaie' , $data );
+			$insert_id = $this->db->insert_id();
 		}
 
 	}

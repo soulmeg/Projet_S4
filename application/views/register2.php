@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>register2</title>
-  <link rel="stylesheet" href="../../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.min.css'); ?>" />
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 <?php
                 $register1Data = $this->session->userdata('register1_data');
 
-                if ($register1Data) {
+                if ( $register1Data ) {
                     $nom = $register1Data['nom'];
                     $prenom = $register1Data['prenom'];
                     $dateNaissance = $register1Data['dateNaissance'];
