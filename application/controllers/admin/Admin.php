@@ -6,7 +6,7 @@
 		public function __construct(){
 			parent::__construct();
 			if( !isset($_SESSION['admin_session']) ){
-				redirect(base_url());
+				redirect(site_url('welcome'));
 			}
 			$this->load->model("user/User_model", 'user');
 			$this->load->model("code/Code_model", 'code');
@@ -25,6 +25,9 @@
 			$data['today'] = date("d-m-Y");
 			$data['body'] = 'admin/acceuil';
 			$data['user_count'] = count($this->user->get_users());
+			$data['diet_count'] = count($this->regime->get_all());
+			$data['sport_count'] = count($this->sport->get_sports());
+			$data['code_count'] = count($this->code->get_all_code());
 			// Mila maka ny nombre d'users total
 
 			$this->load->view('admin/template/index', $data);
@@ -34,7 +37,7 @@
 			$nom = $this->input->post('nom');
 			$montant = $this->input->post('montant');
 			$this->code->insert_code( $nom, $montant);
-			redirect('admin/admin/list_code');
+			redirect(site_url('admin/admin/list_code'));
 			// redirect('admin/admin/list_code');
 		}
 
@@ -51,7 +54,7 @@
 			$nom = $this->input->post('nom');
 			$montant = $this->input->post('montant');
 			$this->code->update_code( $code, $nom, $montant );
-			redirect('admin/admin/list_code');
+			redirect(site_url('admin/admin/list_code'));
 		}
 
 		public function add_code(){
@@ -89,12 +92,12 @@
 
 		public function remove_user( $idUser ){
 			$this->user->remove_user($idUser);
-			redirect('admin/admin/list_user');
+			redirect(site_url('admin/admin/list_user'));
 		}
 
 		public function remove_code( $code ){
 			$this->code->remove_code($code);
-			redirect('admin/admin/list_code');
+			redirect(site_url('admin/admin/list_code'));
 		}
 
 		public function modify_sport( $idSport ){
@@ -108,7 +111,7 @@
 			$nom = $this->input->post('nom');
 			$perte = $this->input->post('perte');
 			$this->sport->update_sport( $id_sport, $nom, $perte );
-			redirect('admin/admin/list_sport');
+			redirect(site_url('admin/admin/list_sport'));
 		}
 
 		public function add_sport(){
@@ -120,7 +123,7 @@
 			$nom = $this->input->post("nom");			
 			$perte = $this->input->post("perte");
 			$this->sport->add_sport( $nom, $perte );
-			redirect('admin/admin/list_sport');
+			redirect(site_url('admin/admin/list_sport'));
 		}
 
 		public function list_sport(){
@@ -131,7 +134,7 @@
 
 		public function remove_sport( $id_sport ){
 			$this->sport->remove_sport( $id_sport );
-			redirect('admin/admin/list_sport');
+			redirect(site_url('admin/admin/list_sport'));
 		}
 
 
@@ -158,7 +161,7 @@
 			$apport = $this->input->post('apport');
 			$unite = $this->input->post('unite');
 			$this->ingredient->add_ingredient( $categorie, $nom, $unite,$apport );
-			redirect( 'admin/admin/list_ingredients' );
+			redirect( site_url('admin/admin/list_ingredients') );
 		}
 
 		public function modify_ingredient( $id ){
@@ -179,7 +182,7 @@
 
 			$this->ingredient->update_ingredients( $id, $category, $nom, $unite, $apport );
 
-			redirect('admin/admin/list_ingredients');
+			redirect(site_url('admin/admin/list_ingredients'));
 		}
 
 		public function list_plate(){
@@ -203,7 +206,7 @@
 			$nom = $this->input->post('nom');
 			$apport = $this->input->post('apport');
 			$this->plat->add_plates( $nom, $apport, $ingredients );
-			redirect('admin/admin/list_plate');
+			redirect(site_url('admin/admin/list_plate'));
 		}
 
 		public function modify_plate($idplate){
@@ -222,7 +225,7 @@
 			$idDetails = $this->input->post("idDetails");
 
 			$this->plat->modify_plate( $id_plate, $nom, $apport, $ingredients, $idDetails );
-			redirect('admin/admin/list_plate');
+			redirect(site_url('admin/admin/list_plate'));
 		}
 
 		public function list_validation(){
@@ -235,12 +238,12 @@
 
 		public function reject_validation($idcode){
 			$this->validation->reject($idcode);
-			redirect('admin/admin/list_validation');
+			redirect(site_url('admin/admin/list_validation'));
 		}
 
 		public function accept_validation($idvalidation, $idcode, $montant, $iduser){
 			$this->validation->validate($idvalidation, $idcode, $montant, $iduser);
-			redirect('admin/admin/list_validation');
+			redirect(site_url('admin/admin/list_validation'));
 		}
 
 		public function list_regimes(){
@@ -265,7 +268,7 @@
 			$tranche_apports = $this->input->post('apport');
 			$tranche_prixs = $this->input->post('prix');
 			$this->regime->add_regime($nom, $apport, $plats_composants, $tranche_durees, $tranche_apports, $tranche_prixs);
-			redirect('admin/admin/list_regimes');
+			redirect(site_url('admin/admin/list_regimes'));
 		}
 
 

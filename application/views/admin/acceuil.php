@@ -25,7 +25,7 @@
                   <div class="card card-tale">
                     <div class="card-body">
                       <p class="mb-4">Nombre total de regime</p>
-                      <p class="fs-30 mb-2">4006</p>
+                      <p class="fs-30 mb-2"><?php echo $diet_count; ?></p>
 
                     </div>
                   </div>
@@ -47,8 +47,7 @@
                   <div class="card card-light-blue">
                     <div class="card-body">
                       <p class="mb-4">Nombre d'activités totale</p>
-                      <p class="fs-30 mb-2">34040</p>
-
+                      <p class="fs-30 mb-2"><?php echo $sport_count; ?></p>
                     </div>
                   </div>
                 </div>
@@ -56,10 +55,16 @@
                   <div class="card card-light-danger">
                     <div class="card-body">
                       <p class="mb-4">Nombre de codes </p>
-                      <p class="fs-30 mb-2">47033</p>
+                      <p class="fs-30 mb-2"><?php echo $code_count; ?></p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="row">
+            <!-- Ato no asiana ny graphe ana code -->
+            <!-- Isaina ny code efa niasa -->
+            
           </div>
