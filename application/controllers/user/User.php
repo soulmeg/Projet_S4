@@ -125,7 +125,7 @@
 			$request = "select*from code";
 			$request = $this->db->query($request);
 			$data['code'] = $request-> result_array(); 
-			$data['user_session'] = $this->session->userdata('user_session');;
+			$data['user_session'] = $this->session->userdata('user_session');
 			$data['contents'] = 'AddMonnaie';
 			$this->load->view('user/body',$data);
 		}
@@ -133,11 +133,60 @@
 		public function validationCode(){
 			$idCode = $this->getIdCodeByNom($this->input->post('nomCode'));
 			$idUser = $this->session->userdata('user_session');
-			$request = "insert into validation values (null,%s,%s,0)";
-			$request = sprintf($request,$idCode,$idUser);
-			$this->db->query($request);
-			
-			redirect("user/User/addWallet");
+			$objetCode = $this->getCodeById($idCode);						
+			try {
+				if($objetCode == 0){
+					$request = "insert into validation values (null,%s,%s,0)";
+					$request = sprintf($request,$idCode,$idUser);
+					$this->db->query($request);
+					redirect("user/User/addWallet");
+				}
+				else{
+					throw new Exception("Desole , ce code a deja ete utilise");
+				}
+			}
+			catch(Exception $e){
+				$this->erreurValidationCode($e->getMessage());
+			}
+		}
+
+		public function erreurValidationCode($e){
+			$data['user_session'] = $this->session->userdata('user_session');
+			$data['erreur'] = $e;
+			$data['contents'] = 'AddMonnaie';
+			$this->load->view('user/body',$data);
+		}
+
+		public function getValidation($idCode,$idUser){
+			$request = "select*from validation where idCode = %s and idUser =%s ORDER BY idValidation DESC LIMIT 1";
+			$request = sprintf($request, $idCode,$idUser);
+			$result = $this->db->query($request);
+			$response = array(); // Tableau pour stocker les résultats
+
+			if ($result->num_rows() > 0) {
+				$row = $result->row();
+				$response['idValidation'] = $row->idValidation;
+				$response['idCode'] = $row->idCode;
+				$response['idUser'] = $row->idUser;
+				$response['etat'] = $row->etat;
+			}
+    		return $response[0];
+		}
+
+		public function getCodeById($idCode){
+			$request = "select*from code where idCode = %s";
+			$request = sprintf($request, $idCode);
+			$result = $this->db->query($request);
+			$response = array(); // Tableau pour stocker les résultats
+
+			if ($result->num_rows() > 0) {
+				$row = $result->row();
+				$response['idCode'] = $row->idCode;
+				$response['nom'] = $row->nom;
+				$response['valeur'] = $row->valeur;
+				$response['etat'] = $row->etat;
+			}
+    		return $response['etat'];
 		}
 
 		public function detailRegime($id){
