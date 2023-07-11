@@ -9,8 +9,8 @@
 <body>
     Heyyyy
     <?php for ($i=0; $i <count($regimes) ; $i++) { 
-    //    echo $regimes['nom'];
-    //     echo $regimes['apport_unitaire'];
+       // echo $regimes['nom'];
+       //  echo $regimes['apport_unitaire'];
    }?>
 
 </body>

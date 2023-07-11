@@ -8,7 +8,7 @@
 			$sql ="select PrixRegime.idRegime,Regime.nom,PrixRegime.apport,PrixRegime.duree,PrixRegime.PrixRegime
 			from PrixRegime
 			join Regime 
-			on PrixRegime.i	dRegime=Regime.idRegime where Regime.idRegime= %s and PrixRegime.apport <= %s ;";
+			on PrixRegime.idRegime=Regime.idRegime where Regime.idRegime= %s and PrixRegime.apport <= %s ;";
 			$sql = sprintf($sql, $this->db->escape($idRegime), $this->db->escape($poid_miampy));
 			// var_dump($sql);
 			$query = $this->db->query($sql);
@@ -87,7 +87,7 @@
 			for($i=0;$i<count($tableauRegime);$i++){
 				$nb = $this->nombreDeFois( $poids_miampy, $tableauRegime[$i]['apport'] );
 				$difference= $this->getDiff( $poids_miampy, ( $nb * $tableauRegime[$i]['apport'] ) );
-				var_dump($difference);
+				// var_dump($difference);
 				$activites = $this->checkActivityOptimal($difference);
 				$data[] = array(
 					'nombre' =>$nb,

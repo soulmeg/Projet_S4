@@ -17,7 +17,7 @@
 		public function check_regime(){
 			$poids = $this->input->post('poids');
 			$data['regimes']=$this->regime->getAllRegimes($poids);
-			$data['poids_session'] = $this->session->set_userdata('poids_session',$poids);
+			$this->session->set_userdata('poids_session',$poids);
 			$data['contents'] = 'LandingPage';
 			$this->load->view('user/body', $data);
 		}

@@ -31,11 +31,11 @@
                                     <h5 class="card-title"><?php echo $regimes[$i]['nom']; ?></h5>
                                     <h5 class="card-title"><?php echo $poids_session;?></h5>
                                     <p class="card-text">
-                                        Prix unitaire pour <?php echo $regimes[$i]['duree']; ?>jours  : <?php echo $regimes[$i]['PrixRegime']; ?> Ar
+                                        Prix unitaire pour  <?php echo $regimes[$i]['duree']; ?>jours  : <?php echo $regimes[$i]['PrixRegime']; ?> Ar
                                     </p>
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <a href="<?php echo base_url('user/Regime/getRegimes/'.$regimes[$i]['idRegime'].'/1000');?>" class="btn btn-primary">Details</a>
+                                            <a href="<?php echo base_url('user/Regime/getRegimes/'.$regimes[$i]['idRegime'].'/'.$poids_session) ;?>" class="btn btn-primary">Details</a>
                                         </div>
                                     </div>
                                 </div>
