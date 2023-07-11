@@ -17,6 +17,12 @@
 			return $query;
 		}
 
+		public function get_plates(){
+			$sql = $this->db->get('Plat');
+			$sql = $sql->result_array();
+			return $sql;
+		}
+
 		public function get_plate( $id_plate ){
 			$sql = "
 				select p.idPlat, p.nom as plat, p.apport, ing.*

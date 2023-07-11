@@ -41,10 +41,8 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Listes des Regimes</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Ajouter des Regimes</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Supprimer des Regimes</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Modifier des Regimes</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/list_regimes'); ?>">Listes des Regimes</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/add_regimes'); ?>">Ajouter des Regimes</a></li>
               </ul>
             </div>
           </li>

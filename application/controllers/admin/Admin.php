@@ -14,6 +14,7 @@
 			$this->load->model("activities/Sport_model", 'sport');
 			$this->load->model("ingredients/Ingredient_model", 'ingredient');
 			$this->load->model("plat/Plat_model", 'plat');
+			$this->load->model("plat/Regime_model", 'regime');
 		}
 
 		public function index(){ // miload dashboard
@@ -240,6 +241,48 @@
 		public function accept_validation($idvalidation, $idcode, $montant, $iduser){
 			$this->validation->validate($idvalidation, $idcode, $montant, $iduser);
 			redirect('admin/admin/list_validation');
+		}
+
+		public function list_regimes(){
+			$regimes = $this->regime->get_all();
+			$data['regimes'] = $regimes;
+			$data['body'] = 'admin/regime/liste_regime';
+			$this->load->view( 'admin/template/index', $data );
+		}
+
+		public function add_regimes(){
+			$plats = $this->plat->get_plates();
+			$data['body'] = 'admin/regime/add_regime';
+			$data['plats'] = $plats;
+			$this->load->view('admin/template/index' , $data);
+		}
+
+		public function add_regime(){
+			$nom = $this->input->post('nom');
+			$apport = $this->input->post('apports');
+			$plats_composants = $this->input->post('plats');
+			$tranche_durees = $this->input->post('duree');
+			$tranche_apports = $this->input->post('apport');
+			$tranche_prixs = $this->input->post('prix');
+			$this->regime->add_regime($nom, $apport, $plats_composants, $tranche_durees, $tranche_apports, $tranche_prixs);
+			redirect('admin/admin/list_regimes');
+		}
+
+
+		public function modify_regime( $idRegime ){
+			$regime = $this->regime->get_regime( $idRegime );
+			$data['regime'] = $regime;
+			$data['plats'] = $this->plat->get_all_plate();
+			$data['body'] = 'admin/regime/modify_regime';
+			$this->load->view( 'admin/template/index' , $data );
+		}
+
+		public function see_regime( $idRegime ){
+			$regime = $this->regime->get_regime( $idRegime );
+			$data['regime'] = $regime;
+			$data['plats'] = $this->plat->get_all_plate();
+			$data['body'] = 'admin/regime/see_regime';
+			$this->load->view( 'admin/template/index' , $data );
 		}
 
 	}
