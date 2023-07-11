@@ -1,3 +1,9 @@
+<?php 
+    $idUser=null;
+    if(isset($user_session)){
+        $idUser = $user_session;
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -42,7 +48,9 @@
                             pour atteindre un poids souhaité. Cela peut être réalisé en augmentant l'apport calorique quotidien,
                              en favorisant les aliments riches en nutriments et en pratiquant une activité physique appropriée. 
                         <div class="price">
-                        </div><button class="btn btn-outline-primary btn-block" type="button">CHOISIR</button>
+                        <form action="<?php echo base_url('regimes/Regimes'); ?>" method="POST">
+                            </div><button class="btn btn-outline-primary btn-block" type="button">CHOISIR</button>
+                        </form>
                     </div></div>
                 </div>
             </div>

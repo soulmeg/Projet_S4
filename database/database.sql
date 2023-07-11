@@ -115,5 +115,14 @@ create table Paiement(
     foreign key(idPrix) references PrixRegime(id)
 );
 
+
+
 alter table code modify column nom varchar(150) unique;
+alter table activite add column duree int;
+insert into activite values(default,'Natation',1000,3);
+insert into activite values(default,'Musculation',1500,7);
+insert into activite values(default,'Footing',700,5);
+insert into activite values(default,'Vitesse',800,2);
+insert into activite values(default,'Endurance',1300,4);
+
 

@@ -209,6 +209,7 @@
 		}
 		
 		public function choixRegime(){
+			$data['user_session'] = $this->session->userdata('user_session');
 			$data['contents'] = 'choixRegime';
 			$this->load->view('user/body',$data);
 		}
