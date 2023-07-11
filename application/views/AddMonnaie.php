@@ -29,7 +29,8 @@
         else{
             echo "mbola tsy tonga le idUser";
         }
-        ?>                                                  
+        ?>       
+        <?php  echo "etatCode: ".$etat; ?>                                           
         <h2>Codes Disponibles</h2>
         <ul id="code-list" class="list-group">
             <?php foreach ($code as $codes) { ?>
@@ -47,6 +48,9 @@
                 <div class="form-group">
                     <input type="text" class="form-control" id="code-input" placeholder="Entrez le code" namespace name="nomCode">
                 </div>
+                <?php if(isset($erreur)) { ?>
+                    <p> <?php echo $erreur; ?> </p>
+                 <?php } ?>
                 <button type="submit" class="btn btn-primary">Valider</button>
             </form>
         </div>
