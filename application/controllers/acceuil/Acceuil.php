@@ -7,7 +7,18 @@
 		public function admin(){
 			$this->load->view("admin/index");
 		}
+		public function user(){
+			$this->load->view('loginUser');
+		}
+		public function bienvenue(){
+			$this->load->view('acceuil');
+			// echo "tongasoa";
+		}
+		public function inscription(){
+			$this->load->view('register1');
+		}
 
+	
 	}
 
 ?>

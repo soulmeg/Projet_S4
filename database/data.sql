@@ -110,7 +110,6 @@ insert into code values(default,'AR0001000_1','1000',0);
 
 
 -- ACTIVITE
-
 insert into activite values(default,'Natation',-1000);
 insert into activite values(default,'Musculation',1500);
 insert into activite values(default,'Footing',700);
@@ -120,15 +119,14 @@ insert into activite values(default,'Endurance',1300);
 
 
 -- Details regime Sport 
-
 insert into DetailsRegimeSport values(default,1,1);
 insert into DetailsRegimeSport values(default,2,2);
 insert into DetailsRegimeSport values(default,3,3);
 insert into DetailsRegimeSport values(default,4,4);
 insert into DetailsRegimeSport values(default,5,5);
 
--- PRIX REGIME 
 
+-- PRIX REGIME 
 insert into PrixRegime values(default,7,1,10000);
 
 
