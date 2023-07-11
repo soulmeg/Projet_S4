@@ -114,3 +114,5 @@ create table Paiement(
     foreign key(idRegime) references Regime(idRegime),
     foreign key(idPrix) references PrixRegime(id)
 );
+
+

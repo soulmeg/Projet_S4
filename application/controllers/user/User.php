@@ -51,16 +51,32 @@
 			$sexe = $this->input->post('sexe');
 
 			// Stocker les données dans une variable de session
-			$this->session->set_userdata('register1_data', [
-				'nom' => $nom,
-				'prenom' => $prenom,
-				'dateNaissance' => $dateNaissance,
-				'poids' => $poids,
-				'taille' => $taille,
-				'sexe' => $sexe
-			]);
+			// $this->session->set_userdata('register1_data',[
+			// 	'nom' => $nom,
+			// 	'prenom' => $prenom,
+			// 	'dateNaissance' => $dateNaissance,
+			// 	'poids' => $poids,
+			// 	'taille' => $taille,
+			// 	'sexe' => $sexe
+			// ]);
 			// redirect('register2');
 			$this->load->view('register2');
+		}
+
+		//redirect to view AchatCode
+		public function redirectAchatCode($user_session){
+			$request = "select*from code";
+			$request = $this->db->query($request);
+			$result['code'] = $request-> result_array(); 
+			$result['user_session'] = $user_session;
+			$this->load->view('achatCode',$result);	
+		}
+
+		//validation
+		public function validation($idCode,$idUser){
+			$request = "insert into validation values (null,%s,%s,0)";
+			$request = sprintf($request,$idCode,$idUser);
+			$this->db->query($request);
 		}
 
 

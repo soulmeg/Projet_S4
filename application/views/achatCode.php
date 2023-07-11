@@ -10,5 +10,15 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/css/login.css');?>"/>
 </head>
 <body>
+    <h4>Id : <?php echo $user_session; ?></h4>
+    Achat De code 
+    <ul>
+        <?php foreach ($code as $codes) { ?>
+            <li> 
+                <?php echo $codes['nom'] ; ?>
+                <a href="<?php echo site_url("user/User/validation/".$codes['idCode']."/".$user_session); ?>"><?php echo $codes['valeur']?></a>
+            </li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
