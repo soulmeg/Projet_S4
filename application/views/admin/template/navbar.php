@@ -57,10 +57,8 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Liste des activités</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Ajouter une activité</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Supprimer une activité</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Modifier une activité</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/list_sport'); ?>">Liste des activités</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/add_sport'); ?>">Ajouter une activité</a></li>
               </ul>
             </div>
           </li>
@@ -68,7 +66,9 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
               <i class="icon-contract menu-icon"></i>
-              <span class="menu-title">Validation des codes</span>
+              <span class="menu-title">
+                  Validation des codes
+              </span>
               <!-- <i class="menu-arrow"></i> -->
             </a>
           </li>
@@ -81,26 +81,22 @@
             </a>
             <div class="collapse" id="ingredient">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Liste des ingredients</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Ajouter un ingredient</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Supprimer un ingredient</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Modifier un ingredient</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/list_ingredients'); ?>">Liste des ingredients</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/add_ing'); ?>">Ajouter un ingredient</a></li>
               </ul>
             </div>
           </li>
 
            <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ingredient" aria-expanded="false" aria-controls="ingredient">
+            <a class="nav-link" data-toggle="collapse" href="#menu" aria-expanded="false" aria-controls="menu">
               <i class="icon-contract menu-icon"></i>
               <span class="menu-title">Menus</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ingredient">
+            <div class="collapse" id="menu">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Liste des Menus</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Ajouter un menu</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Supprimer un menu</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Modifier un menu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/list_plates'); ?>">Liste des Menus</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('admin/admin/add_plates'); ?>">Ajouter un menu</a></li>
               </ul>
             </div>
           </li>

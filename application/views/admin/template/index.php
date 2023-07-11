@@ -53,5 +53,6 @@
   <script src="<?php echo base_url('assets/SkyDash/js/dashboard.js'); ?>"></script>
   <script src="<?php echo base_url('assets/SkyDash/js/Chart.roundedBarCharts.js'); ?>"></script>
   <!-- End custom js for this page-->
+  <script src="<?php echo base_url('assets/js/app.js'); ?>"></script>
 </body>
 </html>
