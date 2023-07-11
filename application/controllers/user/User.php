@@ -30,7 +30,7 @@
 				$this->session->set_userdata('user_id', $user->idUser);
 				// redirect("acceuil/Acceuil/bienvenue");
 				$data['user_session'] = $this->session->userdata('user_session');
-				$data['contents'] = 'acceuil';
+				$data['contents'] = 'LandingPage';
 				$this->load->view('user/body', $data);
 			}catch(Exception $e){
 				echo $e->getMessage();
@@ -50,16 +50,32 @@
 			$sexe = $this->input->post('sexe');
 
 			// Stocker les données dans une variable de session
-			$this->session->set_userdata('register1_data', [
-				'nom' => $nom,
-				'prenom' => $prenom,
-				'dateNaissance' => $dateNaissance,
-				'poids' => $poids,
-				'taille' => $taille,
-				'sexe' => $sexe
-			]);
+			// $this->session->set_userdata('register1_data',[
+			// 	'nom' => $nom,
+			// 	'prenom' => $prenom,
+			// 	'dateNaissance' => $dateNaissance,
+			// 	'poids' => $poids,
+			// 	'taille' => $taille,
+			// 	'sexe' => $sexe
+			// ]);
 			// redirect('register2');
 			$this->load->view('register2');
+		}
+
+		//redirect to view AchatCode
+		public function redirectAchatCode($user_session){
+			$request = "select*from code";
+			$request = $this->db->query($request);
+			$result['code'] = $request-> result_array(); 
+			$result['user_session'] = $user_session;
+			$this->load->view('achatCode',$result);	
+		}
+
+		//validation
+		public function validation($idCode,$idUser){
+			$request = "insert into validation values (null,%s,%s,0)";
+			$request = sprintf($request,$idCode,$idUser);
+			$this->db->query($request);
 		}
 
 
@@ -100,19 +116,49 @@
 		}
 
 		public function getLandingPage(){
+			$data['user_session'] = $this->session->userdata('user_session');
 			$data['contents'] = 'LandingPage';
 			$this->load->view('user/body',$data);
 		}
 
 		public function addWallet(){
+			$request = "select*from code";
+			$request = $this->db->query($request);
+			$data['code'] = $request-> result_array(); 
+			$data['user_session'] = $this->session->userdata('user_session');;
 			$data['contents'] = 'AddMonnaie';
 			$this->load->view('user/body',$data);
+		}
+
+		public function validationCode(){
+			$idCode = $this->getIdCodeByNom($this->input->post('nomCode'));
+			$idUser = $this->session->userdata('user_session');
+			$request = "insert into validation values (null,%s,%s,0)";
+			$request = sprintf($request,$idCode,$idUser);
+			$this->db->query($request);
+			
+			redirect("user/User/addWallet");
 		}
 
 		public function detailRegime($id){
 			$data['contents'] = 'detailsRegime';
 			$this->load->view('user/body',$data);
 		}
+		
+
+		public function getIdCodeByNom($nomCode) {
+			$request = "SELECT idCode FROM code WHERE nom LIKE '%s'";
+			$request = sprintf($request, $nomCode);
+			$result = $this->db->query($request);
+		
+			if ($result->num_rows() > 0) {
+				$row = $result->row();
+				return $row->idCode;
+			} else {
+				return null; 
+			}
+		}
+		
 	}	
 
 ?>

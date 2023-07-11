@@ -16,6 +16,7 @@
      
         <div class="container-fluid">
             <div class="container-fluid">
+            <?php echo $user_session;?>
               <div class="card">
                 <div class="card-body">
                     <h2 class="card-title fw-semibold mb-4">Nos regimes</h2>
