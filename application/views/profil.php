@@ -40,24 +40,24 @@
                                                     <div class="col">
                                                         <div class="form-group">
                                                             <label for="username">
-                                                            <strong>Username: <?php echo $profil->Nom ;?></strong>
+                                                            <strong>Username: <?php echo $profil['Nom'] ;?></strong>
                                                         </label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Email: <?php echo $profil->email ;?></strong></label></div>
+                                                        <div class="form-group"><label for="email"><strong>Email: <?php echo $profil['email'];?></strong></label></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col">
                                                         <div class="form-group">
                                                             <label for="username">
-                                                            <strong>Poids: <?php echo $profil->poids ;?>kg</strong>
+                                                            <strong>Poids: <?php echo $profil['poids'] ;?>kg</strong>
                                                         </label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Taille: <?php echo $profil->taille ;?>m</strong></label></div>
+                                                        <div class="form-group"><label for="email"><strong>Taille: <?php echo $profil['taille'] ;?>m</strong></label></div>
                                                     </div>
                                                 </div>
                                             </form>
