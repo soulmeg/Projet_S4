@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modernize Free</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <!-- <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" /> -->
   <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.min.css'); ?>" />
   <link rel="stylesheet" href="<?php echo base_url('assets/css/landingPage.css'); ?>" />
+
 </head>
 <body>
       <!-- Sidebar Start -->
@@ -16,7 +17,6 @@
         <div>
           <div class="brand-logo d-flex align-items-center justify-content-between">
             <a href="./index.html" class="text-nowrap logo-img">
-              <img src="<?php echo base_url('assets/images/logo.png'); ?>" width="180" alt="" />
             </a>
             <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
               <i class="ti ti-x fs-8"></i>
@@ -37,7 +37,25 @@
                   <span class="hide-menu">Acceuil</span>
                 </a>
               </li>
-             
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="<?php echo base_url('user/User/choixRegime');?>" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-layout-dashboard"></i>
+                  </span>
+                  <span class="hide-menu">Choisir mon regime</span>
+                </a>
+              </li>
+
+
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="<?php echo base_url('user/User/addWallet/1');?>" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-layout-dashboard"></i>
+                  </span>
+                  <span class="hide-menu">Ajout porte monnaie</span>
+                </a>
+              </li>
+
               <li class="sidebar-item">
                 <a class="sidebar-link" href="<?php echo base_url('user/User/getUserById/1');?>" aria-expanded="false">
                   <span>
@@ -46,28 +64,13 @@
                   <span class="hide-menu">Profile</span>
                 </a>
               </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="<?php echo base_url('user/User/getLandingPage');?>" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-layout-dashboard"></i>
-                  </span>
-                  <span class="hide-menu">Liste Regime</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="<?php echo base_url('user/User/addWallet/'.$user_session);?>" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-layout-dashboard"></i>
-                  </span>
-                  <span class="hide-menu">Ajout porte monnaie </span>
-                </a>
-              </li>
+           
               <li class="nav-small-cap">
                 <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                 <span class="hide-menu">Regime</span>
               </li>
               <li class="sidebar-item">
-                <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+                <a class="sidebar-link" href="#" aria-expanded="false">
                   <span>
                     <i class="ti ti-article"></i>
                   </span>
@@ -75,7 +78,7 @@
                 </a>
               </li>
               <li class="sidebar-item">
-                <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+                <a class="sidebar-link" href="#" aria-expanded="false">
                   <span>
                     <i class="ti ti-alert-circle"></i>
                   </span>
@@ -109,7 +112,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <img src="../../assets/images/lalaina.jpg" alt="" width="35" height="35" class="rounded-circle">
+                    <img src="<?php echo base_url('assets/img/user.png'); ?>" alt="" width="50" height="48" class="rounded-circle">
                   </a>
                   <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                     <div class="message-body">

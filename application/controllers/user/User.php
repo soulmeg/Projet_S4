@@ -159,6 +159,10 @@
 			}
 		}
 		
+		public function choixRegime(){
+			$data['contents'] = 'choixRegime';
+			$this->load->view('user/body',$data);
+		}
 	}	
 
 ?>
