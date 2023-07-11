@@ -48,8 +48,7 @@ create table detailsPlat(
 
 create table Regime(
     idRegime int primary key auto_increment,
-    nom varchar(150),
-    apport double precision
+    nom varchar(150)
 );
 
 create table DetailsRegime(
@@ -97,10 +96,12 @@ create table DetailsRegimeSport(
     foreign key(idActivite) references activite(idActivite)
 );
 
+
 create table PrixRegime(
     id int primary key auto_increment,
     duree int,
     idRegime int,
+    apport double precision,
     PrixRegime double precision,
     foreign key(idRegime) references Regime(idRegime) 
 );
