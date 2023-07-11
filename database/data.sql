@@ -54,7 +54,7 @@ VALUES
 
 
 -- DETAILSPLAT------------------------------------------
-INSERT INTO detailsPlat (idPlat, idIngredient)
+INSERT INTO detailsPlat (dPlat, idIngredient)
 VALUES
     (1,13),
     (1, 10),
@@ -127,7 +127,7 @@ insert into DetailsRegimeSport values(default,5,5);
 
 
 -- PRIX REGIME 
-insert into PrixRegime values(default,7,1,-1000,10000);
+insert into PrixRegime values(default,7,1,1000,10000);
 insert into PrixRegime values(default,2,4,500,10000);
 insert into PrixRegime values(default,7,4,1200,15000);
 insert into PrixRegime values(default,14,4,2560,25000);

@@ -163,7 +163,7 @@
 			$result = $this->db->query($request);
 			$response = array(); // Tableau pour stocker les résultats
 
-			if ($result->num_rows() > 0) {
+			if ( $result->num_rows() > 0 ) {
 				$row = $result->row();
 				$response['idValidation'] = $row->idValidation;
 				$response['idCode'] = $row->idCode;

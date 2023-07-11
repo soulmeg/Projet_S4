@@ -30,7 +30,7 @@
             echo "mbola tsy tonga le idUser";
         }
         ?>       
-        <?php  echo "etatCode: ".$etat; ?>                                           
+        <?php  echo "etatCode: ".$etat; ?>
         <h2>Codes Disponibles</h2>
         <ul id="code-list" class="list-group">
             <?php foreach ($code as $codes) { ?>
