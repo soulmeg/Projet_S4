@@ -30,11 +30,11 @@
                   </div>
                   <div class="my-3">
                     <label for="exampleInputEmail1" class="form-label">Username</label>
-                    <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="username" value="soary@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-4">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="passwordInput" name="password">
+                    <input type="password" class="form-control" value="soary1" id="passwordInput" name="password">
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-4">
                     <div class="form-check">

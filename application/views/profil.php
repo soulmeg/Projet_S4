@@ -73,7 +73,7 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label for="" class="username">
-                                                            Argent : <?php echo $profil->wallet['argent']; ?> Ar
+                                                            Argent : <?php echo ($profil->wallet != NULL) ? $profil->wallet["argent"] : 0 ; ?> Ar
                                                         </label>
 
                                                     </div>
