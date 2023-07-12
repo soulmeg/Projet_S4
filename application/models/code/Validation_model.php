@@ -30,7 +30,7 @@
 			$sql2 = "update porteMonnaie set argent = %s where idUser = %s";
 			$sql3 = "update validation set etat = 1 where idValidation = %s";
 			$sql = sprintf( $sql, $this->db->escape($idcode) );
-			$sql2 = sprintf($sql2, $this->db->escape($montant), $this->db->escape($idUser));
+			$sql2 = sprintf($sql2, $this->db->escape($somme), $this->db->escape($idUser));
 			$sql3 = sprintf( $sql3, $this->db->escape($idvalidation) );
 			$this->db->query($sql);
 			$this->db->query($sql2);

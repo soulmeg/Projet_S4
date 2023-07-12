@@ -19,6 +19,7 @@
 			$data['regimes']=$this->regime->getAllRegimes($poids);
 			$this->session->set_userdata('poids_session',$poids);
 			$data['contents'] = 'LandingPage';
+			$data['poids_session'] = $this->session->userdata('poids_session');
 			$this->load->view('user/body', $data);
 		}
     }

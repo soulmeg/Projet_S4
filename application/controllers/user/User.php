@@ -29,7 +29,7 @@
 				$this->session->set_userdata('user_session', true);
 				$this->session->set_userdata('user_id', $user->idUser);
 				// redirect("acceuil/Acceuil/bienvenue");
-				$data['user_session'] = $this->session->userdata('user_session');
+				$data['user_session'] = $this->session->userdata('user_id');
 				$data['contents'] = 'acceuil';
 				$this->load->view('user/body', $data);
 			}catch(Exception $e){
@@ -60,8 +60,8 @@
 			]);
 
 
-			redirect('register2');
-			// $this->load->view('register2');
+			// redirect('register2');
+			$this->load->view('register2');
 		}
 
 		//redirect to view AchatCode
@@ -101,10 +101,11 @@
 			}
 		}
 
+
 		public function logout(){
-			$this->load->library('session');
-			$this->session->unset_userdata('user');  
-			redirect("acceuil/Acceuil/loginUser"); 
+			// $this->load->library('session');
+			$this->session->sess_destroy();
+			redirect(base_url()); 
 		}
 		
 		public function getUserById($id){

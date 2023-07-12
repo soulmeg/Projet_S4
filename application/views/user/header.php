@@ -50,7 +50,7 @@
 
 
               <li class="sidebar-item">
-                <a class="sidebar-link" href="<?php echo base_url('user/User/addWallet/1');?>" aria-expanded="false">
+                <a class="sidebar-link" href="<?php echo base_url('user/User/addWallet/'.$this->session->userdata('user_id'));?>" aria-expanded="false">
                   <span>
                     <i class="ti ti-layout-dashboard"></i>
                   </span>
@@ -59,7 +59,7 @@
               </li>
 
               <li class="sidebar-item">
-                <a class="sidebar-link" href="<?php echo base_url('user/User/getUserById/1');?>" aria-expanded="false">
+                <a class="sidebar-link" href="<?php echo base_url('user/User/getUserById/'.$this->session->userdata('user_id'));?>" aria-expanded="false">
                   <span>
                     <i class="ti ti-layout-dashboard"></i>
                   </span>
@@ -71,7 +71,7 @@
                 <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                 <span class="hide-menu">Regime</span>
               </li>
-              <li class="sidebar-item">
+              <!-- <li class="sidebar-item">
                 <a class="sidebar-link" href="#" aria-expanded="false">
                   <span>
                     <i class="ti ti-article"></i>
@@ -85,6 +85,15 @@
                     <i class="ti ti-alert-circle"></i>
                   </span>
                   <span class="hide-menu">Grossir</span>
+                </a>
+              </li> -->
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-alert-circle"></i>
+                  </span>
+                      <a href="<?php echo site_url('user/user/logout'); ?>" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  <!-- <span class="hide-menu">Grossir</span> -->
                 </a>
               </li>
             </ul>
@@ -116,21 +125,8 @@
                     aria-expanded="false">
                     <img src="<?php echo base_url('assets/img/user.png'); ?>" alt="" width="50" height="48" class="rounded-circle">
                   </a>
-                  <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" >
                     <div class="message-body">
-                      <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                        <i class="ti ti-user fs-6"></i>
-                        <p class="mb-0 fs-3">My Profile</p>
-                      </a>
-                      <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                        <i class="ti ti-mail fs-6"></i>
-                        <p class="mb-0 fs-3">My Account</p>
-                      </a>
-                      <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                        <i class="ti ti-list-check fs-6"></i>
-                        <p class="mb-0 fs-3">My Task</p>
-                      </a>
-                      <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                     </div>
                   </div>
                 </li>

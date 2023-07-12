@@ -40,24 +40,24 @@
                                                     <div class="col">
                                                         <div class="form-group">
                                                             <label for="username">
-                                                            <strong>Username: <?php echo $profil['Nom'] ;?></strong>
+                                                            <strong>Username: <?php echo $profil->Nom ;?></strong>
                                                         </label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Email: <?php echo $profil['email'];?></strong></label></div>
+                                                        <div class="form-group"><label for="email"><strong>Email: <?php echo $profil->email;?></strong></label></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col">
                                                         <div class="form-group">
                                                             <label for="username">
-                                                            <strong>Poids: <?php echo $profil['poids'] ;?>kg</strong>
+                                                            <strong>Poids: <?php echo $profil->poids ;?> kg</strong>
                                                         </label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Taille: <?php echo $profil['taille'] ;?>m</strong></label></div>
+                                                        <div class="form-group"><label for="email"><strong>Taille: <?php echo $profil->taille ;?> m</strong></label></div>
                                                     </div>
                                                 </div>
                                             </form>
@@ -66,21 +66,19 @@
 
                                     <div class="card shadow">
                                         <div class="card-header py-3">
-                                            <p class="text-primary m-0 font-weight-bold">Regime choisi</p>
+                                            <p class="text-primary m-0 font-weight-bold">Etat Financier</p>
                                         </div>
                                         <div class="card-body">
-                                            <form>
-                                                <div class="form-group"><label for="address"><strong>Address</strong></label></div>
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="city"><strong>City</strong></label></div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="" class="username">
+                                                            Argent : <?php echo $profil->wallet['argent']; ?> Ar
+                                                        </label>
+
                                                     </div>
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="country"><strong>Country</strong></label></div>
-                                                    </div>  
                                                 </div>
-                                                <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save&nbsp;Settings</button></div>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
 

@@ -30,6 +30,7 @@
 			$sql = sprintf($sql, $this->db->escape($idUser));
 			$query = $this->db->query($sql);
 			$objets = $query->row();
+			$objets->wallet = $this->get_money($idUser);
 			return $objets;
 		}
 
@@ -86,7 +87,7 @@
 
 		public function get_money( $id ){
 			$sql = "select * from porteMonnaie where idUser = %s";
-			$sql = sprintf( $sql, $this->db->escape($sql) );
+			$sql = sprintf( $sql, $this->db->escape($id) );
 			$sql = $this->db->query($sql);
 			return $sql->row_array();
 		}

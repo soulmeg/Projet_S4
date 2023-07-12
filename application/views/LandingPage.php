@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Landing Page</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="<?php echo base_ur('../assets/images/logos/favicon.png'); ?>" />
   <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.min.css'); ?>" />
   <link rel="stylesheet" href="<?php echo base_url('assets/css/landingPage.css'); ?>" />
 </head>
@@ -29,7 +29,7 @@
                                 <img src="../../assets/images/fitness.jpg" class="card-img-top presentation-card" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $regimes[$i]['nom']; ?></h5>
-                                    <h5 class="card-title"><?php echo $poids_session;?></h5>
+                                    <!-- <h5 class="card-title"><?php echo $poids_session;?></h5> -->
                                     <p class="card-text">
                                         Prix unitaire pour  <?php echo $regimes[$i]['duree']; ?>jours  : <?php echo $regimes[$i]['PrixRegime']; ?> Ar
                                     </p>
