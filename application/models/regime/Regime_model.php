@@ -100,7 +100,7 @@
 					'activites' => $activites
 				);
 			}
-			// var_dump($data);
+			var_dump($data);
 			return $data;
 		}
 

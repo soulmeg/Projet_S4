@@ -12,7 +12,6 @@
 		}
 		public function bienvenue(){
 			$this->load->view('acceuil');
-			// echo "tongasoa";
 		}
 		public function inscription(){
 			$this->load->view('register1');

@@ -11,13 +11,12 @@
 			$data['regimes']=$this->regime->getRegime($idRegime,$poids_miampy);
 			$data['contents'] = 'proposition_regime';
 			$this->load->view('user/body',$data);
-			// $this->load->view('proposition_regime',$data);
 		}
 		
 		public function check_regime(){
 			$poids = $this->input->post('poids');
 			$data['regimes']=$this->regime->getAllRegimes($poids);
-			$this->session->set_userdata('poids_session',$poids);
+			$data['poids_session']=$this->session->userdata('poids_session',$poids);
 			$data['contents'] = 'LandingPage';
 			$this->load->view('user/body', $data);
 		}

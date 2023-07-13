@@ -93,7 +93,7 @@ insert into DetailsRegime values(default,5,4);
 -- CODE-----------------------------------
 insert into code values(default,'AR0010000_1','10000',0);
 insert into code values(default,'AR0010000_2','10000',0);
-insert into code values(default,'AR0010000_3','10000',0);
+insert into code values(default,'AR0010000_3','10000'   ,0);
 insert into code values(default,'AR0010000_4','10000',0);
 insert into code values(default,'AR0020000_1','20000',0);
 insert into code values(default,'AR0020000_2','20000',0);
